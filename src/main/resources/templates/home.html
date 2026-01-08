@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title>this is home page</title>
+
+</head>
+<body>
+
+<!--home section start--->
+    <section class="home" id="home">
+        <div class="content">
+        <h3>adventure is worthwhile</h3>
+        <p>discover new placess with us, advanture awaits</p>
+        <a href="#" th:href="@{discover}" class="btn">Let's Go</a>
+    </div>
+    
+
+    <div class="video-container"  style="background-size: cover;">
+        <video src="videos/video (720p) (1).mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+    </section>
+    <!--home section end--->
+
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head th:fragment="base1">
+<meta charset="UTF-8" />
+<title th:text="${title}">this is home page</title>
+
+</head>
+<body>
+<section>
+
+<div class="container" style="max-width:100%; background-image:linear-gradient(155deg,
+                  white, rgb(222, 333, 444), rgb(83, 112, 218), rgb(0, 106, 255)); padding-top:9rem;">
+<div class="row">
+<div class="col-md-6 offset-md-3">
+<div class="my-card mt-3">
+
+
+
+
+
+
+
+
+
+
+<div class="container text-center">
+<img style="width:60px"src="" th:src="@{/images/contact.png}" alt=""/>
+</div>
+<br>
+<br>
+<br>
+<h1 class="text-center">Put Details here
+</h1>
+
+
+<form action="" th:action="@{/do_to_register}" method="post" th:object="${contact}"  style="padding:4rem;">
+
+
+<!-- id field -->
+
+
+<!-- name Fielt -->
+
+<div class="form-group">
+<label for="name_field" style="font-size: 14px;">Enter Your Name</label>
+<input
+name="name"
+type="text"
+class="form-control"
+id="name_field"
+aria-describedby="emailHelp"
+placeholder="Enter here"/>
+</div>
+<!-- email Fielt -->
+<br>
+
+<div class="form-group">
+<label for="email_field" style="font-size: 14px;">Your Email</label>
+<input
+name="email"
+type="text"
+class="form-control"
+id="email_field"
+aria-describedby="emailHelp"
+placeholder="Enter here"
+th:value="${contact.email}"/>
+</div>
+<!-- password Fielt -->
+<br>
+
+<div class="form-group">
+<label for="phone_field" style="font-size: 14px;">Enter your phone no.</label>
+<input
+name="phone"
+type="text"
+class="form-control"
+id="phone_field"
+aria-describedby="emailHelp"
+placeholder="Enter here"/>
+</div>
+<!-- user about -->
+<br>
+<br>
+<div class="form-group">
+<textarea name="about" th:value="${contact.description}" placeholder="Enter something your self" rows="2" class="form-control"></textarea>
+</div>
+
+<!-- terms and Condition -->
+<br>
+
+<div class="form-group form-check">
+
+<input type="checkbox"
+name="agreement"
+class="form-check-input"
+id="agreement"/>
+
+<label for="agreement" style="font-size: 14px;">Accept Terms and Condition</label>
+
+</div>
+
+
+<div class="container text-center">
+<button type="submit" class="btn bg-primary text-white" >
+
+
+          Submit
+                    
+</button>
+
+
+
+
+
+<button type="submit" class="btn btn-warning">
+Reset
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+
+</section>
+
+
+</body>
+</html>
+
