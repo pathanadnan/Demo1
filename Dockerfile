@@ -35,7 +35,7 @@ FROM eclipse-temurin:17-jre
 # Copy the executable JAR from the builder stage to the final image.
 # The JAR is copied from `/app/build/libs/Billing-0.0.1-SNAPSHOT.jar` in the builder stage
 # and renamed to `app.jar` in the current stage for simplicity.
-COPY --from=builder /build/libs/Travel-2-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=builder /app/build/libs/Travel-2-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the port on which your Spring Boot application will listen.
 # Based on your application.properties, this is 9090.
