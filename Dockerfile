@@ -2,7 +2,6 @@
 # Uses a JDK image from Eclipse Temurin for compilation.
 FROM eclipse-temurin:17-jdk AS builder
 
-# Set the working directory inside the container for the build stage.
 
 # Copy the Gradle wrapper and its directory.
 # This allows you to use the Gradle wrapper (gradlew) inside the container.
