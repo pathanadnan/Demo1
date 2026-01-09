@@ -4,7 +4,7 @@ RUN apt-get install openjdk-17-jdk -y
 COPY . .
 RUN ./gradlew bootJar --no-daemon
 
-FROM openjdk:17-jdk-alpine
+FROM openjdk:17-jdk-bullseye
 EXPOSE 3454
 COPY --from=build /build/libs/Travel-2-1.jar app.jar
 
