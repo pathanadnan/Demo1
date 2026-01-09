@@ -31,7 +31,6 @@ COPY src src
 FROM eclipse-temurin:17-jre
 
 # Set the working directory inside the container for the runtime stage.
-WORKDIR /app
 
 # Copy the executable JAR from the builder stage to the final image.
 # The JAR is copied from `/app/build/libs/Billing-0.0.1-SNAPSHOT.jar` in the builder stage
