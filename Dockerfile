@@ -5,7 +5,7 @@ FROM eclipse-temurin:17-jdk
 
 # Copy the Gradle wrapper and its directory.
 # This allows you to use the Gradle wrapper (gradlew) inside the container.
-##COPY gradlew .
+##COPY gradew .
 ##COPY gradle gradle
 
 # Copy the build configuration files.
