@@ -8,7 +8,7 @@ group = 'com.travel'
 version = '1'
 
 java {
-	sourceCompatibility = '17.11'
+	sourceCompatibility = JavaVersion.VERSION_17
 }
 
 repositories {
