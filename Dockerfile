@@ -35,7 +35,7 @@ WORKDIR /app
 # Copy the executable JAR from the builder stage to the final image.
 # The JAR is copied from `/app/build/libs/Billing-0.0.1-SNAPSHOT.jar` in the builder stage
 # and renamed to `app.jar` in the current stage for simplicity.
-COPY /build/libs/Travel-2-0.0.1-SNAPSHOT-plain.jar /app/Travel-2-0.0.1-SNAPSHOT-plain.jar
+COPY /build/libs/Travel-2-0.0.1-SNAPSHOT.jar /app/Travel-2-0.0.1-SNAPSHOT.jar
 
 # Expose the port on which your Spring Boot application will listen.
 # Based on your application.properties, this is 9090.
@@ -45,4 +45,4 @@ EXPOSE 3454
 # `java -jar app.jar` executes the Spring Boot application.
 # Spring Boot automatically picks up the `server.port` from application.properties
 # and will also respect the `PORT` environment variable set by Render if it's different.
-ENTRYPOINT ["java", "-jar", "Travel-2-0.0.1-SNAPSHOT-plain.jar"]
+ENTRYPOINT ["java", "-jar", "Travel-2-0.0.1-SNAPSHOT.jar"]
